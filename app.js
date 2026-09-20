@@ -9,7 +9,7 @@
   const sign = v => v >= 0 ? css("--pos") : css("--neg");
   let D, charts = [], current = "overview";
 
-  const TABS = [["overview", "Overview"], ["valuation", "Valuation"], ["returns", "Index Returns"], ["sectors", "Sectors"], ["flows", "FII / DII"]];
+  const TABS = [["overview", "Overview"], ["valuation", "Valuation"], ["returns", "Index Returns"], ["sectors", "Sectors"], ["flows", "FII / DII"], ["status", "Data status"]];
 
   async function init() {
     try {
@@ -34,7 +34,7 @@
     document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", b.dataset.id === id));
     charts.forEach(c => c.destroy());
     charts = [];
-    $("#view").innerHTML = { overview, valuation, returns, sectors, flows }[id]();
+    $("#view").innerHTML = { overview, valuation, returns, sectors, flows, status }[id]();
     $("#view").querySelectorAll("canvas[data-chart]").forEach(cv => charts.push(makeChart(cv, JSON.parse(cv.dataset.chart))));
     scrollTo(0, 0);
   }
@@ -145,6 +145,18 @@
       labels: ["FII / FPI", "DII"],
       datasets: [{ label: "Net", data: [Math.round(f.fii), Math.round(f.dii)], colors: [sign(f.fii), sign(f.dii)] }],
     });
+    return out;
+  }
+
+  function status() {
+    let out = `<h2 class="sheet">Data status</h2><p class="subtitle">What on this site refreshes, and how fresh it is. Live means refreshed on demand from end-of-day NSE data, not a streaming feed and not automatic.</p>`;
+    out += `<div class="tablewrap"><table><thead><tr><th>Item</th><th>Status</th><th>Data as of</th><th>Last refreshed</th></tr></thead><tbody>`;
+    for (const f of D.freshness || []) {
+      const c = f.status === "LIVE" ? "pos" : f.status === "STATIC" ? "neg" : "";
+      out += `<tr><td>${esc(f.item)}</td><td class="${c}"><b>${esc(f.status)}</b></td><td>${esc(f.as_of)}</td><td>${esc(f.last_refreshed)}</td></tr>`;
+    }
+    out += `</tbody></table></div>`;
+    out += `<div class="banner warn">${esc(D.static_note)}</div>`;
     return out;
   }
 
