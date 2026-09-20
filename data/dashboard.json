@@ -194,7 +194,7 @@
    "item": "Current P/E and P/B (Nifty 50, Midcap 150, Smallcap 250)",
    "status": "LIVE",
    "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 15:15 IST"
+   "last_refreshed": "20 Sep 2026 20:03 IST"
   },
   {
    "item": "5-year and 10-year average P/E",
@@ -206,19 +206,19 @@
    "item": "vs-average % and Zone flag",
    "status": "MIXED",
    "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 15:15 IST"
+   "last_refreshed": "20 Sep 2026 20:03 IST"
   },
   {
    "item": "1M / 3M / 6M / 1Y returns for 5 indices, plus auto observation",
    "status": "LIVE",
    "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 15:15 IST"
+   "last_refreshed": "20 Sep 2026 20:03 IST"
   },
   {
    "item": "10 sectors: Metals, Pharma, Banks, Auto, Oil & Gas, Consumer Durable, Financial Services, Realty, FMCG, IT",
    "status": "LIVE",
    "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 15:15 IST"
+   "last_refreshed": "20 Sep 2026 20:03 IST"
   },
   {
    "item": "Capital Goods, Consumer Discretionary, Utilities",
@@ -230,10 +230,58 @@
    "item": "8A: latest session net flows (FII, DII)",
    "status": "LIVE",
    "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 15:15 IST"
+   "last_refreshed": "20 Sep 2026 20:03 IST"
+  },
+  {
+   "item": "Breadth, India VIX, Gift Nifty, NSE market cap, movers, 52W highs/lows, most active, block deals, circuit hitters",
+   "status": "LIVE",
+   "as_of": "18-Sep-2026",
+   "last_refreshed": "20 Sep 2026 20:03 IST"
+  },
+  {
+   "item": "All NSE indices: level, 1D/1M/1Y returns, P/E, P/B, dividend yield, 52W range",
+   "status": "LIVE",
+   "as_of": "18-Sep-2026",
+   "last_refreshed": "20 Sep 2026 20:03 IST"
+  },
+  {
+   "item": "FII/DII daily ledger and month/quarter/FY-to-date totals",
+   "status": "LIVE",
+   "as_of": "18-Sep-2026",
+   "last_refreshed": "20 Sep 2026 20:03 IST"
+  },
+  {
+   "item": "INR crosses, dollar index, US 13W/5Y/10Y/30Y yields, Brent, WTI, gold, silver, copper, natural gas",
+   "status": "LIVE",
+   "as_of": "18-Sep-2026",
+   "last_refreshed": "20 Sep 2026 20:03 IST"
+  },
+  {
+   "item": "RBI policy rates, reserve ratios, reference exchange rates (current)",
+   "status": "LIVE",
+   "as_of": "20-Sep-2026",
+   "last_refreshed": "20 Sep 2026 20:03 IST"
+  },
+  {
+   "item": "S&P 500, Nasdaq, Dow, US VIX, Hang Seng, Nikkei, Shanghai, FTSE, DAX, Bitcoin",
+   "status": "LIVE",
+   "as_of": "18-Sep-2026",
+   "last_refreshed": "20 Sep 2026 20:03 IST"
+  },
+  {
+   "item": "Put/call ratio, max pain, ATM implied volatility, support/resistance (nearest two expiries)",
+   "status": "LIVE",
+   "as_of": "18-Sep-2026",
+   "last_refreshed": "20 Sep 2026 20:03 IST"
+  },
+  {
+   "item": "Earnings yield and spreads, breadth, VIX position, gold/silver ratio, parity prices, market-cap / GDP",
+   "status": "MIXED",
+   "as_of": "18-Sep-2026",
+   "last_refreshed": "20 Sep 2026 20:03 IST"
   }
  ],
- "generated_at": "20 Sep 2026 15:15 IST",
- "generated_iso": "2026-09-20T15:15",
+ "generated_at": "20 Sep 2026 20:03 IST",
+ "generated_iso": "2026-09-20T20:03",
  "static_note": "Reference 5Y / 10Y average P/E values are fixed (Jan 2026) and do not update. Capital Goods, Consumer Discretionary and Utilities sector returns are also fixed (Jan 2026)."
 }
