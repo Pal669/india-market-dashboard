@@ -63,3 +63,7 @@ tr.note td{color:var(--muted);font-style:italic}
 .top{padding-top:env(safe-area-inset-top)}
 .foot{padding-bottom:calc(30px + env(safe-area-inset-bottom))}
 html,body{overflow-x:clip}.cards>*,.grid2>*{min-width:0}
+
+.search{width:100%;max-width:420px;margin:0 0 8px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit}
+th{cursor:default}#idxtbl th{cursor:pointer}
+td svg{display:block}
