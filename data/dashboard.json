@@ -189,7 +189,51 @@
    -3.8071890350722337
   ]
  },
- "generated_at": "19 Sep 2026 15:33 IST",
- "generated_iso": "2026-09-19T15:33",
+ "freshness": [
+  {
+   "item": "Current P/E and P/B (Nifty 50, Midcap 150, Smallcap 250)",
+   "status": "LIVE",
+   "as_of": "18-Sep-2026",
+   "last_refreshed": "20 Sep 2026 15:15 IST"
+  },
+  {
+   "item": "5-year and 10-year average P/E",
+   "status": "STATIC",
+   "as_of": "31 Jan 2026",
+   "last_refreshed": "Not refreshed since Jan 2026 (about 8 months old)"
+  },
+  {
+   "item": "vs-average % and Zone flag",
+   "status": "MIXED",
+   "as_of": "18-Sep-2026",
+   "last_refreshed": "20 Sep 2026 15:15 IST"
+  },
+  {
+   "item": "1M / 3M / 6M / 1Y returns for 5 indices, plus auto observation",
+   "status": "LIVE",
+   "as_of": "18-Sep-2026",
+   "last_refreshed": "20 Sep 2026 15:15 IST"
+  },
+  {
+   "item": "10 sectors: Metals, Pharma, Banks, Auto, Oil & Gas, Consumer Durable, Financial Services, Realty, FMCG, IT",
+   "status": "LIVE",
+   "as_of": "18-Sep-2026",
+   "last_refreshed": "20 Sep 2026 15:15 IST"
+  },
+  {
+   "item": "Capital Goods, Consumer Discretionary, Utilities",
+   "status": "STATIC",
+   "as_of": "31 Jan 2026",
+   "last_refreshed": "Not refreshed since Jan 2026 (about 8 months old)"
+  },
+  {
+   "item": "8A: latest session net flows (FII, DII)",
+   "status": "LIVE",
+   "as_of": "18-Sep-2026",
+   "last_refreshed": "20 Sep 2026 15:15 IST"
+  }
+ ],
+ "generated_at": "20 Sep 2026 15:15 IST",
+ "generated_iso": "2026-09-20T15:15",
  "static_note": "Reference 5Y / 10Y average P/E values are fixed (Jan 2026) and do not update. Capital Goods, Consumer Discretionary and Utilities sector returns are also fixed (Jan 2026)."
 }
