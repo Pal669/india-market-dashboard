@@ -230,9 +230,26 @@
         { label: "6M", data: r2("m6"), color: "#2e75b6" }, { label: "1Y", data: r2("y1"), color: "#1f3864" }] });
   }
   function sectors() {
-    return `<h2 class="sheet">Sector returns</h2><p class="subtitle">NSE sector indices, sorted by 1-year return. Sectors marked fixed have no NSE index equivalent and are not refreshed.</p>` + retTable(D.sectors, "Sector") +
+    let out = `<h2 class="sheet">Sector returns and valuation</h2><p class="subtitle">NSE sector indices, sorted by 1-year return. Sectors marked fixed have no NSE index equivalent and are not refreshed.</p>` + retTable(D.sectors, "Sector") +
       chartBox("1-year return by sector", { labels: D.sectors.map(s => s.name + (s.static ? " (fixed)" : "")), unit: "pct", horizontal: true,
         datasets: [{ label: "1Y", data: D.sectors.map(s => +s.y1.toFixed(2)), colors: D.sectors.map(s => s.static ? css("--muted") : sign(s.y1)) }] }, true);
+    const pe = D.sectors.filter(s => s.pe != null);
+    if (pe.length) {
+      const avg = (v, short) => v == null ? "n/a" : v.toFixed(1) + (short ? "*" : "");
+      const vs = v => v == null ? "n/a" : (v > 0 ? "+" : "") + v.toFixed(1) + "%";
+      const flag = z => z == null ? "" : z.startsWith("EXPENSIVE") ? `<span class="neg"><b>${esc(z)}</b></span>` : z.startsWith("CHEAP") ? `<span class="pos"><b>${esc(z)}</b></span>` : esc(z);
+      out += sect("Sector valuation: P/E vs 5-year and 10-year averages");
+      out += table(["Sector", "P/E now", "5Y avg (median)", "10Y avg (median)", "vs 5Y", "vs 10Y", "Zone"], D.sectors.map(s => `<tr><td>${esc(s.name)}${s.static ? ' <span class="note">(fixed, Jan 2026)</span>' : ""}</td>` +
+        (s.pe == null ? `<td class="num" colspan="6">n/a</td>` :
+          `<td class="num">${s.pe.toFixed(1)}</td><td class="num">${avg(s.avg5, s.short5)}</td><td class="num">${avg(s.avg10, s.short10)}</td>` +
+          `<td class="num ${cls(s.vs5 == null ? null : -s.vs5)}">${vs(s.vs5)}</td><td class="num ${cls(s.vs10 == null ? null : -s.vs10)}">${vs(s.vs10)}</td><td>${flag(s.zone)}</td>`) + `</tr>`));
+      const live = pe.filter(s => !s.static);
+      out += chartBox("P/E now vs 5-year and 10-year average (live sectors)", { labels: live.map(s => s.name), datasets: [
+        { label: "P/E now", data: live.map(s => s.pe), color: css("--brand2") }, { label: "5Y avg (median)", data: live.map(s => s.avg5), color: "#e08a1e" },
+        { label: "10Y avg (median)", data: live.map(s => s.avg10), color: "#7d5ba6" }] }, true);
+      out += `<div class="banner warn">Averages are the median of weekly NSE index P/E readings on the same basis as "P/E now". The median is used because NSE's P/E series has data breaks and earnings-collapse spikes (for example Smallcap 250 printed over 3,000 in 2016) that make a plain mean meaningless. * marks an index whose history is shorter than the window. Expensive means 20% or more above an average, cheap 20% or more below. Fixed rows are January 2026 figures on a different (Bloomberg) basis.</div>`;
+    }
+    return out;
   }
 
   // ---------------------------------------------------------------- data status
