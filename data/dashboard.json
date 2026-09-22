@@ -2,181 +2,181 @@
  "valuation": [
   {
    "name": "Nifty 50",
-   "pe": 19.74,
-   "pb": 2.82,
+   "pe": 19.79,
+   "pb": 2.83,
    "avg5": 24.1,
    "avg10": 22.9,
-   "vs5": -18.1,
-   "vs10": -13.8,
+   "vs5": -17.9,
+   "vs10": -13.6,
    "zone": "—"
   },
   {
    "name": "Nifty Midcap 150",
-   "pe": 28.64,
-   "pb": 4.29,
+   "pe": 28.53,
+   "pb": 4.24,
    "avg5": 26.9,
    "avg10": 25.1,
-   "vs5": 6.5,
-   "vs10": 14.1,
+   "vs5": 6.1,
+   "vs10": 13.7,
    "zone": "—"
   },
   {
    "name": "Nifty Smallcap 250",
-   "pe": 33.74,
-   "pb": 3.46,
+   "pe": 33.73,
+   "pb": 3.45,
    "avg5": 25.3,
    "avg10": 22.1,
-   "vs5": 33.4,
-   "vs10": 52.7,
+   "vs5": 33.3,
+   "vs10": 52.6,
    "zone": "EXPENSIVE vs 10Y"
   }
  ],
  "returns": [
   {
    "name": "Sensex",
-   "m1": -3.8071890350722337,
-   "m3": -4.024049306467581,
-   "m6": -3.140863192976995,
-   "y1": -10.503052620949394
+   "m1": -3.7076536090966616,
+   "m3": -3.1496423656934502,
+   "m6": 0.17833972155145705,
+   "y1": -9.121334941476588
   },
   {
    "name": "Nifty 50",
-   "m1": -3.34714695569015,
-   "m3": -3.3995365772922836,
-   "m6": -1.8142973698155318,
-   "y1": -8.170361396497727
+   "m1": -3.4541481114959582,
+   "m3": -2.4936388887732086,
+   "m6": 1.297021350234706,
+   "y1": -7.552202092229454
   },
   {
    "name": "Nifty 500",
-   "m1": -2.6918849372028486,
-   "m3": -1.5767168179536384,
-   "m6": 4.211950322574753,
-   "y1": -2.884276050325496
+   "m1": -2.848454970824854,
+   "m3": -1.227737402891449,
+   "m6": 7.183782744667777,
+   "y1": -2.667898572167604
   },
   {
    "name": "Nifty Midcap 150",
-   "m1": -1.9818188821694172,
-   "m3": 0.0377841455104555,
-   "m6": 10.387385042512577,
-   "y1": 4.580387966463917
+   "m1": -2.5243830021745017,
+   "m3": -0.6797124444183344,
+   "m6": 12.804235943224107,
+   "y1": 4.183447028848519
   },
   {
    "name": "Nifty Smallcap 250",
-   "m1": -0.3234905364710272,
-   "m3": 3.8313480122185384,
-   "m6": 20.680632591043047,
-   "y1": 4.6091187044701165
+   "m1": -0.7352921211331354,
+   "m3": 3.1910149149250833,
+   "m6": 23.57430899915156,
+   "y1": 4.416511004861201
   }
  ],
  "sectors": [
   {
    "name": "Metals",
-   "m1": 0.2095921015254909,
-   "m3": 0.32435589989547875,
-   "m6": 12.276083936535787,
-   "y1": 31.11404649854599,
+   "m1": -1.5175439928336032,
+   "m3": -0.36940894568688876,
+   "m6": 13.668484808656988,
+   "y1": 29.858156738305695,
    "static": false,
-   "pe": 15.89,
+   "pe": 15.79,
    "avg5": 19.1,
    "avg10": 16.1,
    "short5": false,
    "short10": false,
    "since10": "Sep 2016",
-   "vs5": -16.7,
-   "vs10": -1.5,
+   "vs5": -17.2,
+   "vs10": -2.1,
    "zone": "—"
   },
   {
    "name": "Pharma",
-   "m1": 1.3208456143145808,
-   "m3": 9.99868216224229,
-   "m6": 18.016047648082846,
-   "y1": 18.320571799409514,
+   "m1": 2.5091285008393527,
+   "m3": 10.469413703020813,
+   "m6": 19.877155545302493,
+   "y1": 19.10621247785038,
    "static": false,
-   "pe": 41.36,
+   "pe": 41.84,
    "avg5": 33.5,
    "avg10": 35.1,
    "short5": false,
    "short10": false,
    "since10": "Sep 2016",
-   "vs5": 23.5,
-   "vs10": 18.0,
+   "vs5": 25.0,
+   "vs10": 19.3,
    "zone": "EXPENSIVE vs 5Y"
   },
   {
    "name": "Banks",
-   "m1": -1.5781734611193476,
-   "m3": -2.7691421197368116,
-   "m6": 1.8664806180813454,
-   "y1": 1.1327451731597327,
+   "m1": -2.2355547207114634,
+   "m3": -2.1064127622506423,
+   "m6": 5.696739760102787,
+   "y1": 1.8244157605143307,
    "static": false,
-   "pe": 13.33,
+   "pe": 13.36,
    "avg5": 16.0,
    "avg10": 22.7,
    "short5": false,
    "short10": false,
    "since10": "Sep 2016",
-   "vs5": -16.5,
-   "vs10": -41.3,
+   "vs5": -16.3,
+   "vs10": -41.2,
    "zone": "CHEAP vs 10Y"
   },
   {
    "name": "Auto",
-   "m1": -7.297395654469307,
-   "m3": 1.4304728860706328,
-   "m6": 5.977416954277248,
-   "y1": -0.7330946400115557,
+   "m1": -6.776058726986811,
+   "m3": 2.135735338096967,
+   "m6": 9.852766842396976,
+   "y1": -0.2514736650679361,
    "static": false,
-   "pe": 31.52,
+   "pe": 31.55,
    "avg5": 29.5,
    "avg10": 31.5,
    "short5": false,
    "short10": false,
    "since10": "Sep 2016",
-   "vs5": 6.7,
-   "vs10": 0.1,
-   "zone": "—"
-  },
-  {
-   "name": "Oil & Gas",
-   "m1": -2.514880488640958,
-   "m3": -3.1401361507123693,
-   "m6": -2.2166849753056606,
-   "y1": -2.992526436567744,
-   "static": false,
-   "pe": 10.84,
-   "avg5": 10.8,
-   "avg10": 11.4,
-   "short5": false,
-   "short10": true,
-   "since10": "Jan 2020",
-   "vs5": 0.0,
-   "vs10": -5.2,
+   "vs5": 6.8,
+   "vs10": 0.2,
    "zone": "—"
   },
   {
    "name": "Consumer Durable",
-   "m1": -6.0014106649248555,
-   "m3": 1.2450913254223872,
-   "m6": 5.733182478489218,
-   "y1": -4.42566258047491,
+   "m1": -5.84894106456616,
+   "m3": 2.6057416010957013,
+   "m6": 9.979605847379203,
+   "y1": -2.8841950078796086,
    "static": false,
-   "pe": 61.64,
+   "pe": 62.22,
    "avg5": 66.0,
    "avg10": 67.4,
    "short5": false,
    "short10": true,
    "since10": "Jan 2020",
-   "vs5": -6.6,
-   "vs10": -8.5,
+   "vs5": -5.8,
+   "vs10": -7.6,
+   "zone": "—"
+  },
+  {
+   "name": "Oil & Gas",
+   "m1": -1.5783237575730524,
+   "m3": -1.4637749278184398,
+   "m6": -0.260082737121603,
+   "y1": -2.885743781599348,
+   "static": false,
+   "pe": 10.9,
+   "avg5": 10.8,
+   "avg10": 11.4,
+   "short5": false,
+   "short10": true,
+   "since10": "Jan 2020",
+   "vs5": 0.6,
+   "vs10": -4.6,
    "zone": "—"
   },
   {
    "name": "Financial Services",
-   "m1": -2.29048567488892,
-   "m3": -4.032623641230238,
-   "m6": -1.6096901534479957,
-   "y1": -4.452097765242813,
+   "m1": -2.8037774646814673,
+   "m3": -3.429476205159443,
+   "m6": 3.0004660800648786,
+   "y1": -3.7805907809224992,
    "static": false,
    "pe": 15.65,
    "avg5": 17.7,
@@ -190,53 +190,53 @@
   },
   {
    "name": "Realty",
-   "m1": -5.76021433355659,
-   "m3": 2.9261155815654805,
-   "m6": 15.517241379310365,
-   "y1": -8.084272415482607,
+   "m1": -6.335015357612983,
+   "m3": 5.166892474442664,
+   "m6": 22.60913268236646,
+   "y1": -7.541959935029774,
    "static": false,
-   "pe": 35.85,
+   "pe": 36.26,
    "avg5": 47.2,
    "avg10": 49.0,
    "short5": false,
    "short10": false,
    "since10": "Sep 2016",
-   "vs5": -24.1,
-   "vs10": -26.8,
+   "vs5": -23.3,
+   "vs10": -26.0,
    "zone": "CHEAP vs 10Y"
   },
   {
    "name": "FMCG",
-   "m1": -4.7512506598959225,
-   "m3": -8.433676706038717,
-   "m6": -5.433141288296339,
-   "y1": -19.559607836546068,
+   "m1": -3.3887977403103786,
+   "m3": -7.380742432711096,
+   "m6": -2.3541962939995886,
+   "y1": -18.431824825560373,
    "static": false,
-   "pe": 31.54,
+   "pe": 31.84,
    "avg5": 42.0,
    "avg10": 41.9,
    "short5": false,
    "short10": false,
    "since10": "Sep 2016",
-   "vs5": -24.9,
-   "vs10": -24.8,
+   "vs5": -24.2,
+   "vs10": -24.0,
    "zone": "CHEAP vs 10Y"
   },
   {
    "name": "IT",
-   "m1": -4.4976657746798265,
-   "m3": 1.3633593229924967,
-   "m6": -2.3841904239951583,
-   "y1": -21.4847518044095,
+   "m1": -5.5723046942167676,
+   "m3": 5.119253578154259,
+   "m6": -1.2626885299798496,
+   "y1": -21.180209550757624,
    "static": false,
-   "pe": 18.41,
+   "pe": 18.39,
    "avg5": 27.2,
    "avg10": 24.9,
    "short5": false,
    "short10": false,
    "since10": "Sep 2016",
-   "vs5": -32.3,
-   "vs10": -26.2,
+   "vs5": -32.4,
+   "vs10": -26.3,
    "zone": "CHEAP vs 10Y"
   },
   {
@@ -292,26 +292,26 @@
   }
  ],
  "flows": {
-  "date": "18-Sep-2026",
-  "fii": 599.54,
-  "dii": 1019.69
+  "date": "21-Sep-2026",
+  "fii": -576.2,
+  "dii": 2797.27
  },
  "observation": {
   "best": [
    "Nifty Smallcap 250",
-   -0.3234905364710272
+   -0.7352921211331354
   ],
   "worst": [
    "Sensex",
-   -3.8071890350722337
+   -3.7076536090966616
   ]
  },
  "freshness": [
   {
    "item": "Current P/E and P/B (Nifty 50, Midcap 150, Smallcap 250)",
    "status": "LIVE",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "21-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "5-year and 10-year average P/E",
@@ -322,26 +322,26 @@
   {
    "item": "vs-average % and Zone flag",
    "status": "MIXED",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "21-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "1M / 3M / 6M / 1Y returns for 5 indices, plus auto observation",
    "status": "LIVE",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "22-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "10 sectors: Metals, Pharma, Banks, Auto, Oil & Gas, Consumer Durable, Financial Services, Realty, FMCG, IT",
    "status": "LIVE",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "21-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "Sector P/E now with 5Y and 10Y averages (10 NSE sectors)",
    "status": "LIVE",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "21-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "Capital Goods, Consumer Discretionary, Utilities (returns and P/E)",
@@ -352,59 +352,59 @@
   {
    "item": "8A: latest session net flows (FII, DII)",
    "status": "LIVE",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "21-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "Breadth, India VIX, Gift Nifty, NSE market cap, movers, 52W highs/lows, most active, block deals, circuit hitters",
    "status": "LIVE",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "21-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "All NSE indices: level, 1D/1M/1Y returns, P/E, P/B, dividend yield, 52W range",
    "status": "LIVE",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "21-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "FII/DII daily ledger and month/quarter/FY-to-date totals",
    "status": "LIVE",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "21-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "INR crosses, dollar index, US 13W/5Y/10Y/30Y yields, Brent, WTI, gold, silver, copper, natural gas",
    "status": "LIVE",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "22-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "RBI policy rates, reserve ratios, reference exchange rates (current)",
    "status": "LIVE",
-   "as_of": "20-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "22-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "S&P 500, Nasdaq, Dow, US VIX, Hang Seng, Nikkei, Shanghai, FTSE, DAX, Bitcoin",
    "status": "LIVE",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "21-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "Put/call ratio, max pain, ATM implied volatility, support/resistance (nearest two expiries)",
    "status": "LIVE",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "21-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   },
   {
    "item": "Earnings yield and spreads, breadth, VIX position, gold/silver ratio, parity prices, market-cap / GDP",
    "status": "MIXED",
-   "as_of": "18-Sep-2026",
-   "last_refreshed": "20 Sep 2026 20:20 IST"
+   "as_of": "21-Sep-2026",
+   "last_refreshed": "22 Sep 2026 12:34 IST"
   }
  ],
- "generated_at": "20 Sep 2026 20:20 IST",
- "generated_iso": "2026-09-20T20:20",
+ "generated_at": "22 Sep 2026 12:34 IST",
+ "generated_iso": "2026-09-22T12:34",
  "static_note": "Reference 5Y / 10Y average P/E values are fixed (Jan 2026) and do not update. Capital Goods, Consumer Discretionary and Utilities sector returns are also fixed (Jan 2026)."
 }
