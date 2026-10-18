@@ -50,7 +50,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -q openpyxl yfinance python-dateutil requests
+      - run: pip install -q openpyxl yfinance python-dateutil requests brotli   # NSE replies Brotli-compressed
       - name: Refresh and publish
         run: |
           git -C ea/market-dashboard-portal config user.name "market-dashboard-bot"
