@@ -1,0 +1,61 @@
+name: Refresh market data
+
+# Runs on GitHub's servers, so the portal keeps updating whether or not any PC or Mac is on (added 2026-10-19).
+# The code is not copied here: it is read from the private EA-Demo repo (Scripts/), so there is one copy of the logic.
+# Safe to run many times: Scripts/daily_market_job.py exits if the market is open or the session is already in the ledger.
+# GitHub's scheduler can start late or skip a run, so the evening run is repeated, plus a next-morning catch-up.
+# Times are UTC:  13:15 = 18:45 IST   14:45 = 20:15 IST   16:30 = 22:00 IST   02:30 = 08:00 IST (Tue-Sat)
+on:
+  schedule:
+    - cron: "15 13 * * 1-5"
+    - cron: "45 14 * * 1-5"
+    - cron: "30 16 * * 1-5"
+    - cron: "30 2 * * 2-6"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Refresh even if the latest session is already captured"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      TZ: Asia/Kolkata
+      EA_DEMO_ROOT: ${{ github.workspace }}/ea
+      PYTHONIOENCODING: utf-8
+    steps:
+      - name: Code + workbook template (private EA-Demo repo, read-only)
+        uses: actions/checkout@v4
+        with:
+          repository: Pal669/EA-Demo
+          ssh-key: ${{ secrets.EA_DEMO_DEPLOY_KEY }}   # read-only deploy key on EA-Demo
+          path: ea
+          sparse-checkout: |
+            Scripts
+            Final Output/Economic Analysis/output
+      - name: This portal (data + history ledgers)
+        uses: actions/checkout@v4
+        with:
+          path: ea/market-dashboard-portal
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q openpyxl yfinance python-dateutil requests
+      - name: Refresh and publish
+        run: |
+          git -C ea/market-dashboard-portal config user.name "market-dashboard-bot"
+          git -C ea/market-dashboard-portal config user.email "actions@users.noreply.github.com"
+          python ea/Scripts/daily_market_job.py ${{ inputs.force && '--force' || '' }}
+      - name: Show the job log
+        if: always()
+        run: cat ea/Scripts/logs/daily_job.log 2>/dev/null || true
