@@ -34,10 +34,10 @@
  "returns": [
   {
    "name": "Sensex",
-   "m1": 9.570741620359557,
-   "m3": 0.9277151124317484,
-   "m6": 2.9762198810197704,
-   "y1": -4.971462928485504
+   "m1": 10.894278431422855,
+   "m3": 2.6258906777012037,
+   "m6": 3.937350099326653,
+   "y1": -2.740315397621995
   },
   {
    "name": "Nifty 50",
@@ -298,8 +298,8 @@
  },
  "observation": {
   "best": [
-   "Nifty 50",
-   9.897436347750489
+   "Sensex",
+   10.894278431422855
   ],
   "worst": [
    "Nifty Smallcap 250",
@@ -311,7 +311,7 @@
    "item": "Current P/E and P/B (Nifty 50, Midcap 150, Smallcap 250)",
    "status": "LIVE",
    "as_of": "06-Nov-2026",
-   "last_refreshed": "07 Nov 2026 03:13 IST"
+   "last_refreshed": "07 Nov 2026 14:28 IST"
   },
   {
    "item": "5-year and 10-year average P/E",
@@ -323,25 +323,25 @@
    "item": "vs-average % and Zone flag",
    "status": "MIXED",
    "as_of": "06-Nov-2026",
-   "last_refreshed": "07 Nov 2026 03:13 IST"
+   "last_refreshed": "07 Nov 2026 14:28 IST"
   },
   {
    "item": "1M / 3M / 6M / 1Y returns for 5 indices, plus auto observation",
    "status": "LIVE",
    "as_of": "06-Nov-2026",
-   "last_refreshed": "07 Nov 2026 03:13 IST"
+   "last_refreshed": "07 Nov 2026 14:28 IST"
   },
   {
    "item": "10 sectors: Metals, Pharma, Banks, Auto, Oil & Gas, Consumer Durable, Financial Services, Realty, FMCG, IT",
    "status": "LIVE",
    "as_of": "06-Nov-2026",
-   "last_refreshed": "07 Nov 2026 03:13 IST"
+   "last_refreshed": "07 Nov 2026 14:28 IST"
   },
   {
    "item": "Sector P/E now with 5Y and 10Y averages (10 NSE sectors)",
    "status": "LIVE",
    "as_of": "06-Nov-2026",
-   "last_refreshed": "07 Nov 2026 03:13 IST"
+   "last_refreshed": "07 Nov 2026 14:28 IST"
   },
   {
    "item": "Capital Goods, Consumer Discretionary, Utilities (returns and P/E)",
@@ -353,10 +353,10 @@
    "item": "8A: latest session net flows (FII, DII)",
    "status": "LIVE",
    "as_of": "06-Nov-2026",
-   "last_refreshed": "07 Nov 2026 03:13 IST"
+   "last_refreshed": "07 Nov 2026 14:28 IST"
   }
  ],
- "generated_at": "07 Nov 2026 03:13 IST",
- "generated_iso": "2026-11-07T03:13",
+ "generated_at": "07 Nov 2026 14:28 IST",
+ "generated_iso": "2026-11-07T14:28",
  "static_note": "Reference 5Y / 10Y average P/E values are fixed (Jan 2026) and do not update. Capital Goods, Consumer Discretionary and Utilities sector returns are also fixed (Jan 2026)."
 }
