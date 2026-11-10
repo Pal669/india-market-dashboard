@@ -78,14 +78,14 @@
     const r50 = D.returns.find(r => r.name === "Nifty 50");
     const f = D.flows;
     let out = `<h2 class="sheet">Market snapshot</h2><p class="subtitle">Latest available close. Use the tabs above for detail.</p><div class="cards">`;
-    out += card("Nifty 50 P/E", n50.pe.toFixed(1), `${n50.vs10 > 0 ? "+" : ""}${n50.vs10.toFixed(1)}% vs 10Y avg (${n50.avg10})`);
+    out += card("Nifty 50 P/E", n50.pe.toFixed(2), `${n50.vs10 > 0 ? "+" : ""}${n50.vs10.toFixed(2)}% vs 10Y avg (${n50.avg10.toFixed(2)})`);
     out += card("Nifty 50 · 1 year", pct(r50.y1), `1M ${pct(r50.m1)} · 6M ${pct(r50.m6)}`, cls(r50.y1));
-    out += card("Smallcap 250 P/E", sc.pe.toFixed(1), `${sc.zone !== "—" ? sc.zone : "Within range"} · ${sc.vs10 > 0 ? "+" : ""}${sc.vs10.toFixed(1)}% vs 10Y avg`, sc.zone !== "—" ? "neg" : "");
+    out += card("Smallcap 250 P/E", sc.pe.toFixed(2), `${sc.zone !== "—" ? sc.zone : "Within range"} · ${sc.vs10 > 0 ? "+" : ""}${sc.vs10.toFixed(2)}% vs 10Y avg`, sc.zone !== "—" ? "neg" : "");
     if (f) out += card(`FII net · ${f.date}`, inr(f.fii) + " Cr", `DII ${inr(f.dii)} Cr`, cls(f.fii));
     if (M) {
       const n = M.nse, fxr = M.yahoo.fx.find(x => x.name === "USD / INR"), br = M.yahoo.commodities.find(x => x.name.startsWith("Brent")), gd = M.yahoo.commodities.find(x => x.name.startsWith("Gold"));
       if (n.vix) out += card("India VIX", n.vix.last.toFixed(2), `${pct(n.vix.chg1d)} today · 52W ${n.vix.lo52}–${n.vix.hi52}`, "");
-      if (n.gift) out += card("Gift Nifty", num(n.gift.last, 1), `${pct(n.gift.chg_pct)} vs prev close`, cls(n.gift.chg_pct));
+      if (n.gift) out += card("Gift Nifty", num(n.gift.last, 2), `${pct(n.gift.chg_pct)} vs prev close`, cls(n.gift.chg_pct));
       out += card("Advances / declines", `${num(n.breadth.advances, 0)} / ${num(n.breadth.declines, 0)}`, `${(100 * n.breadth.advances / (n.breadth.advances + n.breadth.declines)).toFixed(0)}% of stocks advancing`);
       if (fxr) out += card("USD / INR", fxr.last.toFixed(2), `1Y ${pct(fxr.y1)} (positive = rupee weaker)`);
       if (br) out += card("Brent (USD/bbl)", br.last.toFixed(2), `1D ${pct(br.chg1d)} · 1Y ${pct(br.y1)}`, cls(-br.chg1d));
@@ -105,7 +105,7 @@
     let out = `<h2 class="sheet">Market breadth and movers</h2><p class="subtitle">NSE, ${esc(n.market_status || "")} · ${esc(n.trade_date || "")}</p><div class="cards">`;
     out += card("Advances", num(b.advances, 0), `${num(b.declines, 0)} declines · ${num(b.unchanged, 0)} unchanged`, "pos");
     if (n.vix) out += card("India VIX", n.vix.last.toFixed(2), `${pct(n.vix.chg1d)} · 1M ago ${n.vix.m1_ago} · 1Y ago ${n.vix.y1_ago}`);
-    if (n.gift) out += card("Gift Nifty", num(n.gift.last, 1), `${pct(n.gift.chg_pct)} · expiry ${n.gift.expiry}`, cls(n.gift.chg_pct));
+    if (n.gift) out += card("Gift Nifty", num(n.gift.last, 2), `${pct(n.gift.chg_pct)} · expiry ${n.gift.expiry}`, cls(n.gift.chg_pct));
     if (n.mcap) out += card("NSE market cap", `₹${num(n.mcap.lakh_cr, 1)} lakh cr`, `USD ${n.mcap.usd_tn} trillion`);
     out += card("Circuit hitters", `${n.circuit.upper} up / ${n.circuit.lower} down`, "Upper / lower circuit, all securities");
     out += card("52-week highs / lows", `${n.high52.count} / ${n.low52.count}`, `EQ series: ${n.high52.count_eq} / ${n.low52.count_eq}`);
@@ -140,7 +140,7 @@
         if (y == null) return -1;
         return (typeof x === "string" ? x.localeCompare(y) : x - y) * dir;
       });
-      tb.innerHTML = rows.map(r => `<tr><td>${esc(r.index)}</td><td class="num">${num(r.last)}</td><td class="num ${cls(r.chg1d)}">${pct(r.chg1d)}</td><td class="num ${cls(r.m1)}">${pct(r.m1)}</td><td class="num ${cls(r.y1)}">${pct(r.y1)}</td><td class="num">${r.pe == null ? "" : r.pe.toFixed(1)}</td><td class="num">${r.pb == null ? "" : r.pb.toFixed(2)}</td><td class="num ${cls(r.from_hi)}">${pct(r.from_hi)}</td></tr>`).join("");
+      tb.innerHTML = rows.map(r => `<tr><td>${esc(r.index)}</td><td class="num">${num(r.last)}</td><td class="num ${cls(r.chg1d)}">${pct(r.chg1d)}</td><td class="num ${cls(r.m1)}">${pct(r.m1)}</td><td class="num ${cls(r.y1)}">${pct(r.y1)}</td><td class="num">${r.pe == null ? "" : r.pe.toFixed(2)}</td><td class="num">${r.pb == null ? "" : r.pb.toFixed(2)}</td><td class="num ${cls(r.from_hi)}">${pct(r.from_hi)}</td></tr>`).join("");
     };
     document.querySelectorAll("#idxtbl th").forEach((th, i) => th.addEventListener("click", () => { const k = heads[i]; dir = key === k ? -dir : 1; key = k; draw(); }));
     q.addEventListener("input", draw);
@@ -209,12 +209,12 @@
   function valuation() {
     let out = `<h2 class="sheet">Index valuation</h2><p class="subtitle">Trailing P/E from NSE vs reference 5-year and 10-year averages. Flag: expensive when P/E is 20% or more above an average, cheap when 20% or more below.</p>`;
     out += table(["Index", "P/E now", "P/B now", "5Y avg", "10Y avg", "vs 5Y", "vs 10Y", "Flag"], D.valuation.map(v =>
-      `<tr><td>${esc(v.name)}</td><td class="num">${v.pe.toFixed(1)}</td><td class="num">${v.pb.toFixed(2)}</td><td class="num">${v.avg5}</td><td class="num">${v.avg10}</td>` +
-      `<td class="num ${cls(-v.vs5)}">${v.vs5 > 0 ? "+" : ""}${v.vs5.toFixed(1)}%</td><td class="num ${cls(-v.vs10)}">${v.vs10 > 0 ? "+" : ""}${v.vs10.toFixed(1)}%</td><td>${esc(v.zone)}</td></tr>`));
+      `<tr><td>${esc(v.name)}</td><td class="num">${v.pe.toFixed(2)}</td><td class="num">${v.pb.toFixed(2)}</td><td class="num">${num(v.avg5)}${v.basis === "nse" ? "†" : ""}</td><td class="num">${num(v.avg10)}${v.basis === "nse" ? "†" : ""}</td>` +
+      `<td class="num ${cls(-v.vs5)}">${v.vs5 > 0 ? "+" : ""}${v.vs5.toFixed(2)}%</td><td class="num ${cls(-v.vs10)}">${v.vs10 > 0 ? "+" : ""}${v.vs10.toFixed(2)}%</td><td>${esc(v.zone)}</td></tr>`));
     out += chartBox("Current P/E vs averages", { labels: D.valuation.map(v => v.name), datasets: [
       { label: "P/E now", data: D.valuation.map(v => v.pe), color: css("--brand2") }, { label: "5Y avg", data: D.valuation.map(v => v.avg5), color: "#e08a1e" },
       { label: "10Y avg", data: D.valuation.map(v => v.avg10), color: "#7d5ba6" }] });
-    out += `<div class="banner warn">${esc(D.static_note.split(". ")[0] + ".")} The NSE P/E basis differs slightly from the source of the averages, so read the gap as directional.</div>`;
+    out += `<div class="banner warn">${esc(D.static_note.split(". ")[0] + ".")} The NSE P/E basis differs slightly from the source of the averages, so read the gap as directional.${D.valuation.some(v => v.basis === "nse") ? " † Nifty Next 50 has no fixed reference average, so its 5Y / 10Y figures are the median of weekly NSE P/E readings (same basis as P/E now, updated every refresh)." : ""}</div>`;
     return out;
   }
 
@@ -235,13 +235,13 @@
         datasets: [{ label: "1Y", data: D.sectors.map(s => +s.y1.toFixed(2)), colors: D.sectors.map(s => s.static ? css("--muted") : sign(s.y1)) }] }, true);
     const pe = D.sectors.filter(s => s.pe != null);
     if (pe.length) {
-      const avg = (v, short) => v == null ? "n/a" : v.toFixed(1) + (short ? "*" : "");
-      const vs = v => v == null ? "n/a" : (v > 0 ? "+" : "") + v.toFixed(1) + "%";
+      const avg = (v, short) => v == null ? "n/a" : v.toFixed(2) + (short ? "*" : "");
+      const vs = v => v == null ? "n/a" : (v > 0 ? "+" : "") + v.toFixed(2) + "%";
       const flag = z => z == null ? "" : z.startsWith("EXPENSIVE") ? `<span class="neg"><b>${esc(z)}</b></span>` : z.startsWith("CHEAP") ? `<span class="pos"><b>${esc(z)}</b></span>` : esc(z);
       out += sect("Sector valuation: P/E vs 5-year and 10-year averages");
       out += table(["Sector", "P/E now", "5Y avg (median)", "10Y avg (median)", "vs 5Y", "vs 10Y", "Zone"], D.sectors.map(s => `<tr><td>${esc(s.name)}${s.static ? ' <span class="note">(fixed, Jan 2026)</span>' : ""}</td>` +
         (s.pe == null ? `<td class="num" colspan="6">n/a</td>` :
-          `<td class="num">${s.pe.toFixed(1)}</td><td class="num">${avg(s.avg5, s.short5)}</td><td class="num">${avg(s.avg10, s.short10)}</td>` +
+          `<td class="num">${s.pe.toFixed(2)}</td><td class="num">${avg(s.avg5, s.short5)}</td><td class="num">${avg(s.avg10, s.short10)}</td>` +
           `<td class="num ${cls(s.vs5 == null ? null : -s.vs5)}">${vs(s.vs5)}</td><td class="num ${cls(s.vs10 == null ? null : -s.vs10)}">${vs(s.vs10)}</td><td>${flag(s.zone)}</td>`) + `</tr>`));
       const live = pe.filter(s => !s.static);
       out += chartBox("P/E now vs 5-year and 10-year average (live sectors)", { labels: live.map(s => s.name), datasets: [
